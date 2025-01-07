@@ -1,5 +1,7 @@
 import math
 
+# Funções para calcular os PARÂMETROS DE LINHA um cabo coaxial e bifilar
+
 def resistencia_por_metro_coaxial(a, b, muRelativo, sigmaC, frequencia):
     mu = muRelativo * 4 * math.pi * 10**-7
     # Calculo da resistencia por metro
