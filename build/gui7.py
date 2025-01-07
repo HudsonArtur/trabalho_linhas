@@ -11,7 +11,7 @@ from tkinter import Tk, Canvas, Entry, Text, Button, PhotoImage
 import subprocess
 
 OUTPUT_PATH = Path(__file__).parent
-ASSETS_PATH = OUTPUT_PATH / Path(r"C:\Users\Hudson Artur\Documents\Faculdade\Quinto_periodo\linhas\trabalho_da_disciplina\codigo\build\assets\frame0")
+ASSETS_PATH = OUTPUT_PATH / Path(r"C:\Users\Hudson Artur\Documents\Faculdade\Quinto_periodo\linhas\trabalho_da_disciplina\codigo\build\assets\frame7")
 
 
 def relative_to_assets(path: str) -> Path:
@@ -36,46 +36,36 @@ canvas = Canvas(
 
 canvas.place(x = 0, y = 0)
 canvas.create_text(
-    197.0,
-    27.0,
+    220.0,
+    30.0,
     anchor="nw",
     text="Linhas de Transmissão e Ondas",
     fill="#000000",
     font=("Inter Bold", 48 * -1)
 )
 
-canvas.create_text(
-    339.0,
-    88.0,
-    anchor="nw",
-    text="Hudson Artur de Lima Andrade",
-    fill="#000000",
-    font=("RobotoRoman Regular", 36 * -1)
-)
+def open_gui0():
+    subprocess.Popen(["python", "build/gui.py"])
+    window.destroy()
 
 button_image_1 = PhotoImage(
     file=relative_to_assets("button_1.png"))
-
-def open_gui1():
-    subprocess.Popen(["python", "build/gui1.py"])
-    window.destroy()
-
 button_1 = Button(
     image=button_image_1,
     borderwidth=0,
     highlightthickness=0,
-    command=open_gui1,
+    command=open_gui0,
     relief="flat"
 )
 button_1.place(
-    x=445.0,
-    y=162.0,
-    width=250.0,
-    height=65.0
+    x=519.0,
+    y=403.0,
+    width=161.0,
+    height=55.0
 )
 
-def open_gui8():
-    subprocess.Popen(["python", "build/gui8.py"])
+def open_gui2():
+    subprocess.Popen(["python", "build/gui2.py"])
     window.destroy()
 
 button_image_2 = PhotoImage(
@@ -84,34 +74,57 @@ button_2 = Button(
     image=button_image_2,
     borderwidth=0,
     highlightthickness=0,
-    command=open_gui8,
+    command=open_gui2,
     relief="flat"
 )
 button_2.place(
-    x=445.0,
-    y=255.0,
-    width=250.0,
-    height=65.0
+    x=88.0,
+    y=403.0,
+    width=256.0,
+    height=55.0
 )
 
-def open_gui9():
-    subprocess.Popen(["python", "build/gui9.py"])
-    window.destroy()
-
-button_image_3 = PhotoImage(
-    file=relative_to_assets("button_3.png"))
-button_3 = Button(
-    image=button_image_3,
-    borderwidth=0,
-    highlightthickness=0,
-    command=open_gui9,
-    relief="flat"
+canvas.create_text(
+    498.0,
+    118.0,
+    anchor="nw",
+    text="Eq. Telegráficas",
+    fill="#000000",
+    font=("RobotoRoman Regular", 28 * -1)
 )
-button_3.place(
-    x=445.0,
-    y=348.0,
-    width=250.0,
-    height=65.0
+
+canvas.create_rectangle(
+    476.0,
+    215.0,
+    724.0,
+    268.0,
+    fill="#FFFFFF",
+    outline="")
+
+canvas.create_rectangle(
+    475.0,
+    296.0,
+    723.0,
+    349.0,
+    fill="#FFFFFF",
+    outline="")
+
+canvas.create_text(
+    293.0,
+    223.0,
+    anchor="nw",
+    text="Cabo Coxial:",
+    fill="#000000",
+    font=("RobotoRoman Regular", 28 * -1)
+)
+
+canvas.create_text(
+    293.0,
+    305.0,
+    anchor="nw",
+    text="Linha Bifilar:",
+    fill="#000000",
+    font=("RobotoRoman Regular", 28 * -1)
 )
 window.resizable(False, False)
 window.mainloop()

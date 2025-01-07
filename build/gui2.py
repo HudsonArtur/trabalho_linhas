@@ -11,7 +11,7 @@ from tkinter import Tk, Canvas, Entry, Text, Button, PhotoImage
 import subprocess
 
 OUTPUT_PATH = Path(__file__).parent
-ASSETS_PATH = OUTPUT_PATH / Path(r"C:\Users\Hudson Artur\Documents\Faculdade\Quinto_periodo\linhas\trabalho_da_disciplina\codigo\build\assets\frame1")
+ASSETS_PATH = OUTPUT_PATH / Path(r"C:\Users\Hudson Artur\Documents\Faculdade\Quinto_periodo\linhas\trabalho_da_disciplina\codigo\build\assets\frame2")
 
 
 def relative_to_assets(path: str) -> Path:
@@ -44,8 +44,8 @@ canvas.create_text(
     font=("Inter Bold", 48 * -1)
 )
 
-def open_gui2():
-    subprocess.Popen(["python", "build/gui2.py"])
+def open_gui1():
+    subprocess.Popen(["python", "build/gui1.py"])
     window.destroy()
 
 button_image_1 = PhotoImage(
@@ -54,18 +54,27 @@ button_1 = Button(
     image=button_image_1,
     borderwidth=0,
     highlightthickness=0,
-    command=open_gui2,
+    command=open_gui1,
     relief="flat"
 )
 button_1.place(
-    x=220.0,
-    y=194.0,
-    width=250.0,
-    height=65.0
+    x=824.0,
+    y=421.0,
+    width=161.0,
+    height=55.0
 )
 
-def open_gui0():
-    subprocess.Popen(["python", "build/gui.py"])
+canvas.create_text(
+    498.0,
+    118.0,
+    anchor="nw",
+    text="Eq. Telegráficas",
+    fill="#000000",
+    font=("RobotoRoman Regular", 28 * -1)
+)
+
+def open_gui3():
+    subprocess.Popen(["python", "build/gui3.py"])
     window.destroy()
 
 button_image_2 = PhotoImage(
@@ -74,15 +83,19 @@ button_2 = Button(
     image=button_image_2,
     borderwidth=0,
     highlightthickness=0,
-    command=open_gui0,
+    command=open_gui3,
     relief="flat"
 )
 button_2.place(
-    x=712.0,
-    y=409.0,
-    width=161.0,
-    height=55.0
+    x=355.0,
+    y=310.0,
+    width=70.0,
+    height=50.0
 )
+
+def open_gui4():
+    subprocess.Popen(["python", "build/gui4.py"])
+    window.destroy()
 
 button_image_3 = PhotoImage(
     file=relative_to_assets("button_3.png"))
@@ -90,15 +103,19 @@ button_3 = Button(
     image=button_image_3,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("button_3 clicked"),
+    command=open_gui4,
     relief="flat"
 )
 button_3.place(
-    x=220.0,
-    y=295.0,
-    width=250.0,
-    height=65.0
+    x=497.0,
+    y=310.0,
+    width=70.0,
+    height=50.0
 )
+
+def open_gui5():
+    subprocess.Popen(["python", "build/gui5.py"])
+    window.destroy()
 
 button_image_4 = PhotoImage(
     file=relative_to_assets("button_4.png"))
@@ -106,15 +123,19 @@ button_4 = Button(
     image=button_image_4,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("button_4 clicked"),
+    command=open_gui5,
     relief="flat"
 )
 button_4.place(
-    x=220.0,
-    y=396.0,
-    width=259.0,
-    height=80.0
+    x=639.0,
+    y=310.0,
+    width=70.0,
+    height=50.0
 )
+
+def open_gui6():
+    subprocess.Popen(["python", "build/gui6.py"])
+    window.destroy()
 
 button_image_5 = PhotoImage(
     file=relative_to_assets("button_5.png"))
@@ -122,37 +143,21 @@ button_5 = Button(
     image=button_image_5,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("button_5 clicked"),
+    command=open_gui6,
     relief="flat"
 )
 button_5.place(
-    x=663.0,
-    y=194.0,
-    width=250.0,
-    height=65.0
-)
-
-button_image_6 = PhotoImage(
-    file=relative_to_assets("button_6.png"))
-button_6 = Button(
-    image=button_image_6,
-    borderwidth=0,
-    highlightthickness=0,
-    command=lambda: print("button_6 clicked"),
-    relief="flat"
-)
-button_6.place(
-    x=663.0,
-    y=282.0,
-    width=250.0,
-    height=91.0
+    x=774.0,
+    y=310.0,
+    width=70.0,
+    height=50.0
 )
 
 canvas.create_text(
-    528.0,
-    118.0,
+    417.0,
+    205.0,
     anchor="nw",
-    text="Unidade 01",
+    text="Selecione um para o cálculo:",
     fill="#000000",
     font=("RobotoRoman Regular", 28 * -1)
 )
