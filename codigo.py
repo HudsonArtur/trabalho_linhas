@@ -70,3 +70,19 @@ def capacitancia_por_metro_bifilar(a, d, epsilonRelativo):
     C = (math.pi*epsilon) / math.cosh**-1(d/2*a)
 
     return C
+
+# Funções para calcular os MÁXIMOS e MÍNIMOS valores de tensão na linha
+
+def maxima_tensao(vi, vr):
+    # Calculo da maxima tensão
+    
+    vmax = vi + vr
+
+    return vmax
+
+def minima_tensao(vi, vr):
+    # Calculo da minima tensão
+    
+    vmin = vi - vr
+
+    return vmin
